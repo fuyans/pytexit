@@ -380,10 +380,10 @@ class LatexVisitor(ast.NodeVisitor):
         elif m in ['eps']:
             m = r'\epsilon'
 
-        elif m in ['lbd']:  # lambda is not a valid identifier in Python so people use other things
+        elif m in ['lbd'] or m in ['lambda']:  # lambda is not a valid identifier in Python so people use other things
             m = r'\lambda'
 
-        elif m in ['Lbd']:
+        elif m in ['Lbd'] or m in ['Lambda']:
             m = r'\Lambda'
 
         elif m in ['inf', 'infinity', 'infty']:
